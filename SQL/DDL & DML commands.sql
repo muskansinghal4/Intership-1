@@ -3,7 +3,8 @@
 -- Examples of DDL statements include CREATE, ALTER, DROP and TRUNCATE.
 
 -- DML (Data Manipulation Language) is a type of SQL command used to manipulate data in a database. 
--- It inserts, updates, and deletes data from a database table. Examples of DML statements include INSERT, UPDATE, and DELETE.
+-- It inserts, updates, and deletes data from a database table. Examples of DML statements include INSERT, UPDATE, and DELETE. 
+-- It focus on adding, updating, and deleting data within database tables.
 
 create database flipkart;
 
@@ -47,9 +48,6 @@ create table payment
     foreign key(order_id) references orders(order_id)
 );
 
--- drop table products ;
--- drop database amazon;
-
 alter table customer
 add phone int(10);
 
@@ -69,7 +67,6 @@ modify column location varchar(30) check(location in ('Mumbai','Delhi' , 'chenna
 -- The TRUNCATE TABLE command deletes the data inside a table, but not the table itself.
 -- truncate table products ;
 
--- implementation
 alter table customer
 modify column age int(2) not null;
 
@@ -83,7 +80,7 @@ alter table products
 modify column location varchar(30) default 'Mumbai' check(location in ('Mumbai','Delhi' , 'chennai')) ;
 
 
--- DML (Data Manipulation Language) commands  focus on adding, updating, and deleting data within database tables.
+-- DML (Data Manipulation Language)
 
 insert into products values(1,'HP Laptop',50000,15,'Mumbai');
 insert into products values(2,'Realme Mobile',20000,30,'Delhi');
@@ -145,7 +142,7 @@ CREATE TABLE students (
 CREATE TABLE courses (
   course_id INT PRIMARY KEY,          
   course_name VARCHAR(100) NOT NULL,
-  foreign key(course_id) references students(course_id)
+  -- foreign key(course_id) references students(course_id)
 );
 
 -- Alter the students table to add the foreign key constraint
