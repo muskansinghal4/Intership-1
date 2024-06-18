@@ -1,3 +1,8 @@
+-- 3 types of in-built functions 1)STRING (CHAR_LENGTH, ASCII, CONCAT, INSTR, LCASE, LOWER, UCASE, UPPER, SUBSTR, LPAD, RPAD, TRIM, RTRIM, LTRIM)
+-- 2)DATE & Time  (CURRENT_DATE, DATEDIFF, DATE, CURRENT_TIME, LAST_DAY, SYSDATE, ADDDATE)
+-- 3) NUMERIC (AVG, COUNT, POW, MIN, MAX, ROUND, SQRT, FLOOR)
+
+
 -- QUESTIONS TO PRACTICE
 -- String Functions:
 
@@ -52,6 +57,16 @@ SELECT ROUND(3.14159, 2);
 -- 5) Write a SQL query to calculate the power of 2 raised to the 5th power. 
 SELECT POW(2, 5);
 
+
+
+
+
+
+
+
+
+
+-- NOTES
 # String Functions
 /* String functions in SQL are a set of built-in functions that allow you to manipulate and operate on string
  (character) data. These functions provide various operations such as concatenation, substring extraction,
