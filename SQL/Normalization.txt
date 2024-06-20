@@ -29,3 +29,10 @@ Dependency Rule:
 3NF: Eliminates transitive dependencies where a non-key attribute relies on another non-key attribute.
 BCNF: Every determinant (attribute or set of attributes that determines another attribute) in a table must be a candidate key. This ensures there are no hidden dependencies beyond the primary key.
 Strictness: BCNF is stricter than 3NF, requiring an additional condition for eliminating certain types of redundancies.
+
+
+ANOMLIES
+ --> Anomalies are undesirable conditions in a relational database that can lead to data inconsistency, which can lead to data manipulation.
+ --> Insertion Anomalies: Occur when you cannot insert valid data due to the structure of the table.
+ --> Deletion Anomalies: Occur when deleting a row also deletes unrelated data.
+ --> Update Anomalies: Occur when updating a value in one row requires changes in other rows to maintain consistency, potentially leading to errors.
