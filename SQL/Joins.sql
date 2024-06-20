@@ -46,15 +46,15 @@ INSERT INTO marks VALUES
 SELECT students.sid, sname, marks.marks FROM students
 INNER JOIN marks ON students.sid = marks.sid;
 
-#2. Left Outer Join
+#2. Left Outer Join Display the student ID, student name, and marks for all students, including those who do not have corresponding entries in the marks table.
 SELECT students.sid, sname, marks.marks FROM students
 LEFT JOIN marks ON students.sid = marks.sid;
 
-#3. Right Join
+#3. Right Join Display the student ID, student name, and marks for all marks entries, including those who do not have corresponding entries in the students table.
 SELECT students.sid, sname, marks.marks FROM students
 RIGHT JOIN marks ON students.sid = marks.sid;
  
-#4.Full Join
+#4.Full Join Display the student ID, student name, and marks for all students and all marks entries, including those that do not have corresponding entries in either table.
 #Note:- MySQL does not support full join we need to perform "UNION" operation between the results obtained from left and right join
 SELECT students.sid, sname, marks.marks FROM students
 LEFT JOIN marks ON students.sid = marks.sid
@@ -62,11 +62,11 @@ UNION
 SELECT students.sid, sname, marks.marks FROM students
 RIGHT JOIN marks ON students.sid = marks.sid;
  
-#5.Self Join
+#5.Self Join Display pairs of student names where the student IDs are consecutive.
 SELECT s1.sname AS Student1, s2.sname AS Student2 FROM students s1
 INNER JOIN students s2 ON s1.sid = s2.sid + 1;
 
-#6.Cross Join
+#6.Cross Join Display the Cartesian product of students and marks, showing all possible combinations of student IDs, student names, and marks.
 SELECT students.sid, sname, marks.marks FROM students
 CROSS JOIN marks;
 
