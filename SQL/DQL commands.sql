@@ -1,7 +1,7 @@
 -- DQL COMMANDS (Data Query Language)  DQL statements are used for performing queries on the data within schema objects. 
 # GROUP BY, ORDER BY, HAVING BY, SELECT
 
--- making dtables and inserting values to solve DQL commands questions
+-- making tables and inserting values to solve DQL commands questions
 CREATE TABLE customer ( cid INT PRIMARY KEY,cname VARCHAR(255),addr VARCHAR(255),age INT);
 INSERT INTO customer (cid, cname, addr, age) VALUES (101, 'A', 'New York', 28),(102, 'B', 'Los Angeles', 34),(103, 'D', 'Chicago', 22),(104, 'C', 'Punjab', 40),(105, 'E', 'Paris', 25);
 CREATE TABLE products (pid INT PRIMARY KEY,pname VARCHAR(255),price DECIMAL(10, 2),stock INT,location VARCHAR(255));
