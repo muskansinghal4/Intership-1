@@ -1,0 +1,31 @@
+Normalization Levels (1NF, 2NF, 3NF):
+1NF - First Normal Form
+-> Multivalued attr should not be present
+-> Primary key is present in the table
+-> Repeating groups
+-> Duplicate rows should not be there
+
+2NF - Second Normal Form
+-> Should be in 1NF
+-> No partial dependency - 
+All non key attr should be completely dependent
+on primary key 
+
+3NF 
+Table must be in 2NF.
+-> No transitive dependencies should exist.
+-> Every non-key attribute must depend on the primary key, and only the primary key.
+-> If a non-key attribute depends on another non-key attribute, it should be moved to a separate table along with the attribute it depends on.
+
+
+Boyce-Codd Normal Form (BCNF):
+How does BCNF differ from 3NF? When is it typically used?
+BCNF (Boyce-Codd Normal Form) is a higher level of normalization compared to 3NF. It addresses a specific type of redundancy that 3NF might not eliminate.
+
+Key Differences:
+
+Dependency Rule:
+
+3NF: Eliminates transitive dependencies where a non-key attribute relies on another non-key attribute.
+BCNF: Every determinant (attribute or set of attributes that determines another attribute) in a table must be a candidate key. This ensures there are no hidden dependencies beyond the primary key.
+Strictness: BCNF is stricter than 3NF, requiring an additional condition for eliminating certain types of redundancies.
