@@ -42,7 +42,7 @@ INSERT INTO marks VALUES
     (9, 5, 'Math', 92),
     (10, 5, 'Science', 96);
 
-#1.Inner Join 
+#1.Inner Join Display the student ID, student name, and marks for all students who have corresponding entries in both the students and marks tables.
 SELECT students.sid, sname, marks.marks FROM students
 INNER JOIN marks ON students.sid = marks.sid;
 
