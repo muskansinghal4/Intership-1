@@ -3,9 +3,9 @@
 #1. Inner Join -> Matching values from both tables should be present
 #2. Left Outer Join -> All the rows from the left table should be present and matching rows from the right table are present
 #3. Right Outer Join -> All the rows from the right table should be present and only matching rows from the left table are present 
-#4. Full Outer Join
-#5. Self Join
-#6. Cross Join
+#4. Full Outer Join -> All the rows from both the table should be present 
+#5. Self Join -> It is a regular join, but the table is joined by itself
+#6. Cross Join -> It is used to view all the possible combinations of the rows of one table and with all the rows from second table
 
 CREATE DATABASE students_marks;
 USE students_marks;
@@ -54,7 +54,7 @@ LEFT JOIN marks ON students.sid = marks.sid;
 SELECT students.sid, sname, marks.marks FROM students
 RIGHT JOIN marks ON students.sid = marks.sid;
  
-#4.Full Join-> All the rows from both the table should be present 
+#4.Full Join
 #Note:- MySQL does not support full join we need to perform "UNION" operation between the results obtained from left and right join
 SELECT students.sid, sname, marks.marks FROM students
 LEFT JOIN marks ON students.sid = marks.sid
@@ -62,11 +62,11 @@ UNION
 SELECT students.sid, sname, marks.marks FROM students
 RIGHT JOIN marks ON students.sid = marks.sid;
  
-#5.Self Join-> It is a regular join, but the table is joined by itself
+#5.Self Join
 SELECT s1.sname AS Student1, s2.sname AS Student2 FROM students s1
 INNER JOIN students s2 ON s1.sid = s2.sid + 1;
 
-#6.Cross Join-> It is used to view all the possible combinations of the rows of one table and with all the rows from second table
+#6.Cross Join
 SELECT students.sid, sname, marks.marks FROM students
 CROSS JOIN marks;
 
